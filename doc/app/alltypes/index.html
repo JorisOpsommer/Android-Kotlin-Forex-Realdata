@@ -1,0 +1,165 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>alltypes - app</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<h3>All Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="../com.joris.clientapp.network/-api-service/index.html">com.joris.clientapp.network.ApiService</a></td>
+<td>
+<p>Calls that are done to the API</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.injection.base/-base-view-model/index.html">com.joris.clientapp.injection.base.BaseViewModel</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.models/-company-stock/index.html">com.joris.clientapp.models.CompanyStock</a></td>
+<td>
+<p>When we get the JSON query of one stock it looks like the following:
+{"quote":{"symbol":"AAPL","companyName":"Apple}}
+We have a quote object which contains the information of our stock. Therefor we use 2 classes to have a class in a class.
+We acces the root quote object in this class.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.models/-data-stock/index.html">com.joris.clientapp.models.DataStock</a></td>
+<td>
+<p>Uses the stockInterface, when we want to expand this app. We could potentially add cryptocurrencies or other stocks (=not FOREX).
+They will difference from Datastock but will have some of the same attributes
+This class gives us more information about one Datastock class. We have quote object and multiple attributes for example volume.
+This class gets the attributes in our qoute (=stock).</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.fragments/-history-fragment/index.html">com.joris.clientapp.fragments.HistoryFragment</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.fragments/-home-fragment/index.html">com.joris.clientapp.fragments.HomeFragment</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.data/-injector-utils/index.html">com.joris.clientapp.data.InjectorUtils</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.models/-local-storage-stock/index.html">com.joris.clientapp.models.LocalStorageStock</a></td>
+<td>
+<p>This class is used to write data to our local database to store the users history</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.data/-local-storage-stock-dao/index.html">com.joris.clientapp.data.LocalStorageStockDao</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.data/-local-storage-stock-database/index.html">com.joris.clientapp.data.LocalStorageStockDatabase</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.data/-local-storage-stock-repo/index.html">com.joris.clientapp.data.LocalStorageStockRepo</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp/-main-activity/index.html">com.joris.clientapp.MainActivity</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.models/-name-list/index.html">com.joris.clientapp.models.NameList</a></td>
+<td>
+<p>This class is used to display stocks our namelistadapter. We only need 2 attributes, name and symbol of a stock.
+The reason we have a name and namecompany is because of the API we use. Some calls return a symbol + name. Some calls return name + Companyname.
+This is done because there is difference in List to show and in a stock info object (=quote)
+We want to treat them as the same object to make this, again, future proof. We want to be able to display Crypto, Forex, SPX, NDX all in the same list.
+One of the two (name or namecompany) attributes will always be empty. Solution to this is to check with an if and use the not null value.
+When converting the Namelist item to for example a Companystock item we use the symbol send a getrequest to get the Quote object.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.adapter/-name-list-adapter/index.html">com.joris.clientapp.adapter.NameListAdapter</a></td>
+<td>
+<p>Adapter to display every stock item that this app uses. We made it possible to convert every stock to this list.
+This is done with the purpose to expand this app and add for example crypto, SPX, NDX to same list.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.injection.module/-network-module.html">com.joris.clientapp.injection.module.NetworkModule</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.fragments/-one-stock-fragment/index.html">com.joris.clientapp.fragments.OneStockFragment</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.network/-retrofit-client-instance/index.html">com.joris.clientapp.network.RetrofitClientInstance</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.fragments/-search-stock-fragment/index.html">com.joris.clientapp.fragments.SearchStockFragment</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.models/-stock-interface/index.html">com.joris.clientapp.models.StockInterface</a></td>
+<td>
+<p>Interface is made to make this app future proof, when crypto or other stocks get added, they will use this interface.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.viewmodel/-stock-view/index.html">com.joris.clientapp.viewmodel.StockView</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.viewmodel/-view-model-factory/index.html">com.joris.clientapp.viewmodel.ViewModelFactory</a></td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../com.joris.clientapp.injection.component/-view-model-injector/index.html">com.joris.clientapp.injection.component.ViewModelInjector</a></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

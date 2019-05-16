@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NameList - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.joris.clientapp.models</a>&nbsp;/&nbsp;<a href="./index.html">NameList</a><br/>
+<br/>
+<h1>NameList</h1>
+<code><span class="keyword">class </span><span class="identifier">NameList</span></code>
+<p>This class is used to display stocks our namelistadapter. We only need 2 attributes, name and symbol of a stock.
+The reason we have a name and namecompany is because of the API we use. Some calls return a symbol + name. Some calls return name + Companyname.
+This is done because there is difference in List to show and in a stock info object (=quote)
+We want to treat them as the same object to make this, again, future proof. We want to be able to display Crypto, Forex, SPX, NDX all in the same list.
+One of the two (name or namecompany) attributes will always be empty. Solution to this is to check with an if and use the not null value.
+When converting the Namelist item to for example a Companystock item we use the symbol send a getrequest to get the Quote object.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">NameList</span><span class="symbol">(</span><span class="identifier" id="com.joris.clientapp.models.NameList$<init>(kotlin.String, kotlin.String, kotlin.String)/nameSymbol">nameSymbol</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.joris.clientapp.models.NameList$<init>(kotlin.String, kotlin.String, kotlin.String)/nameCompany">nameCompany</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.joris.clientapp.models.NameList$<init>(kotlin.String, kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code>
+<p>This class is used to display stocks our namelistadapter. We only need 2 attributes, name and symbol of a stock.
+The reason we have a name and namecompany is because of the API we use. Some calls return a symbol + name. Some calls return name + Companyname.
+This is done because there is difference in List to show and in a stock info object (=quote)
+We want to treat them as the same object to make this, again, future proof. We want to be able to display Crypto, Forex, SPX, NDX all in the same list.
+One of the two (name or namecompany) attributes will always be empty. Solution to this is to check with an if and use the not null value.
+When converting the Namelist item to for example a Companystock item we use the symbol send a getrequest to get the Quote object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="name.html">name</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">name</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="name-company.html">nameCompany</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">nameCompany</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="name-symbol.html">nameSymbol</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">nameSymbol</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

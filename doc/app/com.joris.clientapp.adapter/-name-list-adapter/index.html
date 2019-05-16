@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NameListAdapter - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.joris.clientapp.adapter</a>&nbsp;/&nbsp;<a href="./index.html">NameListAdapter</a><br/>
+<br/>
+<h1>NameListAdapter</h1>
+<code><span class="keyword">class </span><span class="identifier">NameListAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Adapter</span><span class="symbol">&lt;</span><a href="-custom-view-holder/index.html"><span class="identifier">CustomViewHolder</span></a><span class="symbol">&gt;</span></code>
+<p>Adapter to display every stock item that this app uses. We made it possible to convert every stock to this list.
+This is done with the purpose to expand this app and add for example crypto, SPX, NDX to same list.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-custom-view-holder/index.html">CustomViewHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">inner</span> <span class="keyword">class </span><span class="identifier">CustomViewHolder</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span></code>
+<p>CustomView we made to display the list</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">NameListAdapter</span><span class="symbol">(</span><span class="identifier" id="com.joris.clientapp.adapter.NameListAdapter$<init>(kotlin.collections.MutableList((com.joris.clientapp.models.NameList)), kotlin.Function1((com.joris.clientapp.models.NameList, kotlin.Unit)))/namelist">namelist</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../../com.joris.clientapp.models/-name-list/index.html"><span class="identifier">NameList</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.joris.clientapp.adapter.NameListAdapter$<init>(kotlin.collections.MutableList((com.joris.clientapp.models.NameList)), kotlin.Function1((com.joris.clientapp.models.NameList, kotlin.Unit)))/clickListener">clickListener</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../../com.joris.clientapp.models/-name-list/index.html"><span class="identifier">NameList</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span></code>
+<p>Adapter to display every stock item that this app uses. We made it possible to convert every stock to this list.
+This is done with the purpose to expand this app and add for example crypto, SPX, NDX to same list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="click-listener.html">clickListener</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">clickListener</span><span class="symbol">: </span><span class="symbol">(</span><a href="../../com.joris.clientapp.models/-name-list/index.html"><span class="identifier">NameList</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-item-count.html">getItemCount</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getItemCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Number of items in the whole list</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="on-bind-view-holder.html">onBindViewHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onBindViewHolder</span><span class="symbol">(</span><span class="identifier" id="com.joris.clientapp.adapter.NameListAdapter$onBindViewHolder(com.joris.clientapp.adapter.NameListAdapter.CustomViewHolder, kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<a href="-custom-view-holder/index.html"><span class="identifier">CustomViewHolder</span></a><span class="symbol">, </span><span class="identifier" id="com.joris.clientapp.adapter.NameListAdapter$onBindViewHolder(com.joris.clientapp.adapter.NameListAdapter.CustomViewHolder, kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>bind namelist + clicklistener so we can use this in the class: CustomViewHolder
+we need to bind the listener here so the fragment knows which stock is clicked.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="on-create-view-holder.html">onCreateViewHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onCreateViewHolder</span><span class="symbol">(</span><span class="identifier" id="com.joris.clientapp.adapter.NameListAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="com.joris.clientapp.adapter.NameListAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/pos">pos</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-custom-view-holder/index.html"><span class="identifier">CustomViewHolder</span></a></code>
+<p>creates a ViewHolder class and uses stock_row.xml as layoutfile</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-list.html">setList</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setList</span><span class="symbol">(</span><span class="identifier" id="com.joris.clientapp.adapter.NameListAdapter$setList(kotlin.collections.MutableList((com.joris.clientapp.models.NameList)))/nl">nl</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../../com.joris.clientapp.models/-name-list/index.html"><span class="identifier">NameList</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Setter that is required to update the adapter</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

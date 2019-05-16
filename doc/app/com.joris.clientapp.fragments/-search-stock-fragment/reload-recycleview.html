@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>SearchStockFragment.reloadRecycleview - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.joris.clientapp.fragments</a>&nbsp;/&nbsp;<a href="index.html">SearchStockFragment</a>&nbsp;/&nbsp;<a href="./reload-recycleview.html">reloadRecycleview</a><br/>
+<br/>
+<h1>reloadRecycleview</h1>
+<a name="com.joris.clientapp.fragments.SearchStockFragment$reloadRecycleview(android.view.View, kotlin.CharSequence)"></a>
+<code><span class="keyword">fun </span><span class="identifier">reloadRecycleview</span><span class="symbol">(</span><span class="identifier" id="com.joris.clientapp.fragments.SearchStockFragment$reloadRecycleview(android.view.View, kotlin.CharSequence)/rootview">rootview</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="com.joris.clientapp.fragments.SearchStockFragment$reloadRecycleview(android.view.View, kotlin.CharSequence)/s">s</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Gets called when textChangeListener detects a change.</p>
+<h3>Parameters</h3>
+<p><a name="s"></a>
+<code>s</code> - is the full string in txtSearchStock EditTextField.
+When called we reload the stock list and filter the stocks that match the text in txtSearchStock.
+We fill the list: nList and use this to call the method: setList in the existing nameadapter
+We notify that the data is changed.</p>
+</BODY>
+</HTML>

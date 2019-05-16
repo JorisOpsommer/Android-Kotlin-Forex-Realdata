@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>NameList.<init> - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">com.joris.clientapp.models</a>&nbsp;/&nbsp;<a href="index.html">NameList</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.joris.clientapp.models.NameList$&lt;init&gt;(kotlin.String, kotlin.String, kotlin.String)"></a>
+<code><span class="identifier">NameList</span><span class="symbol">(</span><span class="identifier" id="com.joris.clientapp.models.NameList$<init>(kotlin.String, kotlin.String, kotlin.String)/nameSymbol">nameSymbol</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.joris.clientapp.models.NameList$<init>(kotlin.String, kotlin.String, kotlin.String)/nameCompany">nameCompany</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.joris.clientapp.models.NameList$<init>(kotlin.String, kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code>
+<p>This class is used to display stocks our namelistadapter. We only need 2 attributes, name and symbol of a stock.
+The reason we have a name and namecompany is because of the API we use. Some calls return a symbol + name. Some calls return name + Companyname.
+This is done because there is difference in List to show and in a stock info object (=quote)
+We want to treat them as the same object to make this, again, future proof. We want to be able to display Crypto, Forex, SPX, NDX all in the same list.
+One of the two (name or namecompany) attributes will always be empty. Solution to this is to check with an if and use the not null value.
+When converting the Namelist item to for example a Companystock item we use the symbol send a getrequest to get the Quote object.</p>
+</BODY>
+</HTML>

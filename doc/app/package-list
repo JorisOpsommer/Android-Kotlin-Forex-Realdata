@@ -1,0 +1,13 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+com.joris.clientapp
+com.joris.clientapp.adapter
+com.joris.clientapp.data
+com.joris.clientapp.fragments
+com.joris.clientapp.injection.base
+com.joris.clientapp.injection.component
+com.joris.clientapp.injection.module
+com.joris.clientapp.models
+com.joris.clientapp.network
+com.joris.clientapp.viewmodel
